@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/savannasmit/UF2022/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html>
+<html>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ArcGIS Business Analyst</title>
+    <script>if("ActiveXObject" in window) location.assign("unsupported.html");</script>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <link rel="shortcut icon" href="../esriAnalyst/themes/common/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="themes/bao.css">
+    <link rel="stylesheet" href="../esriAnalystCore/main.css" id="main-stylesheet">
+</head>
 
-### Markdown
+<body data-env="qa" class="claro esriMaps esriMapsAnalyst esriBAO customTheme">
+    <script src="../telemetry/telemetry.js"></script>
+    <script src="../esriAnalyst/config.js"></script>
+    <script src="../baUtil/filterLocale.js"></script>
+    <script src="../dojo/dojo.js"></script>
+    <script>
+    require([
+        "esriAnalystX/services/AppConfig",
+        "esriBAO/config/StaticAppConfig",
+        "esriBAO/config/AppConfig",
+        "esriAnalystX/services/ThemeConfig",
+        "esriBAO/config/ThemeConfig"
+    ], function (AppConfig, StaticAppConfig, SpecialConfig, ThemeConfig, SpecialThemeConfig) {
+        AppConfig.assign(StaticAppConfig, SpecialConfig);
+        
+        require(["esriAnalyst/themes/utils/ApplyThemeUtil"], function(ApplyThemeUtil) {
+            ApplyThemeUtil.startup(ThemeConfig, SpecialThemeConfig);
+            setTimeout(() => {
+                require(["esriAnalyst/widgets/LoadingAnimation/LoadingAnimation", "esriAnalyst"]);
+            }, 100);
+        });
+    });
+    </script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <div id="splashScreen" class="esriMapsAnalystSplashScreen"></div>
+    <div id="layoutNode"></div>
+</body>
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/savannasmit/UF2022/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
